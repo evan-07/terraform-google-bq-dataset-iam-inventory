@@ -1,0 +1,17 @@
+# Terraform local/state artifacts
+.terraform/
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+crash.log
+
+# Terraform variable files (keep generated examples tracked for bootstrap)
+*.tfvars
+*.tfvars.json
+!envs/dev/generated/dataset_iam_filtered.auto.tfvars.json
+!envs/prod/generated/dataset_iam_filtered.auto.tfvars.json
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
