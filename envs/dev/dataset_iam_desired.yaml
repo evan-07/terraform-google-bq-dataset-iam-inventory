@@ -1,0 +1,11 @@
+project_id: my-gcp-project
+bindings:
+  - dataset_id: raw
+    role: roles/bigquery.dataViewer
+    members:
+      - group:analytics-readers@example.com
+      - serviceAccount:etl-dev@my-gcp-project.iam.gserviceaccount.com
+  - dataset_id: curated
+    role: roles/bigquery.dataEditor
+    members:
+      - group:analytics-engineers@example.com
